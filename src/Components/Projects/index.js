@@ -9,6 +9,7 @@ import { PiArrowSquareLeftThin, PiArrowSquareRightThin } from "react-icons/pi";
 import { IoMdArrowDown } from "react-icons/io";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import { Link, animateScroll as scroll } from "react-scroll";
+import AnimatedTentshape from "./AnimatedTentshape";
 
 const Projects = () => {
   {
@@ -70,8 +71,71 @@ const Projects = () => {
         ref={scrollRef}
         id="projects"
       >
-        
         <div  data-aos="fade-left"  className={styles.card} id="card1" ref={refs.card1}>
+          <div className={styles.cardbox}>
+            <div className={styles.arrowboxB}>
+              <div className={styles.arrowdivback}>
+                <PiArrowSquareLeftThin
+                  className={styles.arrow}
+                  onClick={() => scrollToElement(-1)}
+                />
+              </div>
+            </div>
+
+            <div className={styles.arrowboxmb}>
+              {" "}
+              <div className={styles.mobileback}>
+                <IoMdArrowDropleft
+                  className={styles.arrow}
+                  onClick={() => scrollToElement(-1)}
+                />
+              </div>
+            </div>
+            <div className={styles.cardcontainer}>
+              <div className={styles.textcontainer}>
+                <div className={styles.textdiv}>
+                  <div className={styles.header}>
+                    <span className={styles.span}>Tentshape</span>
+                    <br></br>
+                    Portfolio Site
+                  </div>
+                  <div className={styles.p}>
+                    Portfolio site and life's work of a talented tensile photovoltaic arhcitect. 
+                  </div>
+                </div>
+
+                <div className={styles.buttondiv}>
+                  <a 
+                       target="_blank"
+                  href="https:\\www.tentshape.com" className={styles.a}>
+                    <button className={styles.button}>VISIT SITE</button>
+                  </a>
+                </div>
+              </div>
+              <div className={styles.imgdiv}>
+                <AnimatedTentshape />
+              </div>
+            </div>
+
+            <div className={styles.arrowboxF}>
+              <div className={styles.arrowdivforward}>
+                <PiArrowSquareRightThin
+                  className={styles.arrow}
+                  onClick={() => scrollToElement(1)}
+                />
+              </div>{" "}
+            </div>
+            <div className={styles.arrowboxmf}>
+              <div className={styles.mobileforward}>
+                <IoMdArrowDropright
+                  className={styles.arrow}
+                  onClick={() => scrollToElement(1)}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div  data-aos="fade-left"  className={styles.card} id="card2" ref={refs.card2}>
           <div className={styles.cardbox}>
             <div className={styles.arrowboxB}>
               <div className={styles.arrowdivback}>
@@ -137,7 +201,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div data-aos="fade-left" className={styles.card} id="card2" ref={refs.card2}>
+        <div data-aos="fade-left" className={styles.card} id="card3" ref={refs.card3}>
           <div className={styles.cardbox}>
             <div className={styles.arrowboxB}>
               <div className={styles.arrowdivback}>
@@ -205,7 +269,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div data-aos="fade-left" className={styles.card} id="card3" ref={refs.card3}>
+        {/* <div data-aos="fade-left" className={styles.card} id="card4" ref={refs.card4}>
           <div className={styles.cardbox}>
             <div className={styles.arrowboxB}>
               <div className={styles.arrowdivback}>
@@ -270,7 +334,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
