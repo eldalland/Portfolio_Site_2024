@@ -67,7 +67,7 @@ const Contact = () => {
             <form
               className={styles.form}
               target="_blank"
-              action="https://formsubmit.co/eldalland@email.com"
+              action="https://formsubmit.co/eldalland@gmail.com"
               method="POST"
             >
               <div className={styles.firstlastcontainer}>
